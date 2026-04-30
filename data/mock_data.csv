@@ -1,0 +1,4 @@
+workflow_name,branch_name,workflow_start_time,duration
+workflow_1,main,2026/04/30 12:22:00,3
+workflow_2,feature_1,2026/04/30 12:24:01,4.7
+workflow_3,feature_2,2026/04/30 12:25:04,0.2
