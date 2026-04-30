@@ -18,7 +18,7 @@ library(ggplot2)
 
 
 ### Read in data here
-actions_data <- read_csv("data/mock_data.csv")
+actions_data <- read.csv("../data/mock_data.csv")
 ```
 
 ```{r}
@@ -65,6 +65,6 @@ list(
 ```{r}
 # Put in the bubbleplot
 
-p <- ggplot2::ggplot(actions_data) + ggplot2::geom_point()
+p <- ggplot2::ggplot(actions_data) + ggplot2::geom_point(aes(x = workflow_start_time, y = duration))
 p
 ```
