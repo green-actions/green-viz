@@ -18,27 +18,53 @@ library(ggplot2)
 
 
 ### Read in data here
+actions_data <- read_csv("data/mock_data.csv")
+```
+
+```{r}
+mean_duration <- mean(actions_data$duration)
 ```
 
 ## Row {height="20%"}
 
 ```{r}
 #| content: valuebox
-#| title: "Total births"
-
+#| title: "Total time"
+list(
+  icon = "clock",
+  color = "primary",
+  value = mean_duration
+)
 
 ```
 
 
 ```{r}
 #| content: valuebox
-#| title: "Cesarean deliveries"
-
+#| title: "Time for branch X"
+list(
+  icon = "clock",
+  color = "danger",
+  value = mean_duration
+)
 
 ```
 
 ```{r}
 #| content: valuebox
-#| title: "Pre-term births"
+#| title: "Time for branch Y"
+list(
+  icon = "clock",
+  color = "warning",
+  value = mean_duration
+)
+```
 
+## Row {height="40%"}
+
+```{r}
+# Put in the bubbleplot
+
+p <- ggplot2::ggplot(actions_data) + ggplot2::geom_point()
+p
 ```
