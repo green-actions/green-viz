@@ -1,7 +1,44 @@
 ---
-title: "dashboard"
+title: "Green Actions"
+format: 
+    dashboard:
+        nav-buttons: [github]
+        github: https://github.com/green-actions
+theme: minty
 ---
 
-This is a Quarto website.
+```{r setup, include = FALSE}
+library(dplyr)
+library(ggplot2)
+```
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+```{r}
+#| label: load-data
+#| message: false
+
+
+### Read in data here
+```
+
+## Row {height="20%"}
+
+```{r}
+#| content: valuebox
+#| title: "Total births"
+
+
+```
+
+
+```{r}
+#| content: valuebox
+#| title: "Cesarean deliveries"
+
+
+```
+
+```{r}
+#| content: valuebox
+#| title: "Pre-term births"
+
+```
